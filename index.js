@@ -41,3 +41,5 @@ app.post("/api/players", async (req, res) => {
 app.listen(PORT, () => {
   console.log(`Listening to port: ${PORT}`);
 });
+
+module.exports = app;
