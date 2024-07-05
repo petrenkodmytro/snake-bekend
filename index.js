@@ -19,6 +19,11 @@ app.get("/api/players", async (_, res) => {
   try {
     const players = await client.query("select * from players");
     res.status(200).json(players.rows);
+    // res.json({
+    //   status: "success",
+    //   code: 200,
+    //   data: players.rows,
+    // });
   } catch (e) {
     console.log(e);
   }
@@ -34,6 +39,11 @@ app.post("/api/players", async (req, res) => {
       score,
     ]);
     res.status(201).json(newPlayer.rows[0]);
+    // res.json({
+    //   status: "success",
+    //   code: 201,
+    //   data: newPlayer.rows[0]
+    // });
   } catch (e) {
     console.log(e);
   }
