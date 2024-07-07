@@ -4,9 +4,9 @@ const { Client } = require("pg");
 const cors = require("cors");
 
 const app = express();
-//парсер JSON данних у тілі запиту
+// JSON data parser in the request body
 app.use(express.json());
-// дозволяємо кросдоменні запити
+// allow cross-domain queries
 app.use(cors());
 
 const PORT = process.env.PORT || 8080;
